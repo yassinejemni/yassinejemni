@@ -2,8 +2,11 @@
   <head>
     <style>
       body {
-        background-color: #400c0c;
-        color: white;
+        background: black url('https://free4kwallpapers.com/uploads/originals/2015/08/25/website-background.jpg') no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
         font-family: Arial, sans-serif;
         text-align: center;
       }
@@ -15,13 +18,13 @@
       .header h1 {
         font-size: 50px;
         margin-bottom: 40px;
-        color: #FFC107;
+        color: #4b0404;
       }
       
       .header p {
-        font-size: 20px;
+        font-size: 30px;
         margin-bottom: 40px;
-        color: #03A9F4;
+        color: #022907;
 
       }
       
@@ -61,9 +64,13 @@
         margin: 0 auto;
         padding: 40px 0;
       }
+      .about p{
+        font-weight: bolder;
+        color: rgb(6, 0, 20);
+      }
       
       .about h2 {
-        color: #03A9F4;
+        color: #4b0404;
         font-size: 36px;
         margin-bottom: 20px;
       }
@@ -78,7 +85,6 @@
     <div class="header">
       <h1>Yassine Jemni</h1>
       <p></p>
-      <p>Links to my social medias ;)</p>
     </div>
     
     <div class="links">
@@ -101,8 +107,25 @@
       
       <div class="about">
         <h2>About Me</h2>
-        <p>I am a creative and driven individual who is passionate about technology and innovation. I love learning new things and expanding my knowledge, and I am always seeking new challenges and opportunities to grow and improve. Whether I am coding, designing, or simply exploring new ideas, I am constantly striving to push the boundaries of what is possible and create something truly remarkable. </p>
+        <p>I am a 19-year-old student with a passion for programming. My hobbies include coding and learning about the latest technological advancements in the field. I am constantly seeking to improve my skills and expand my knowledge. In my free time, I enjoy experimenting with new programming languages and building projects that challenge my abilities. I am driven, focused, and always striving to reach new heights in my personal and professional life. . </p>
       </div>
+      <script>
+        document.querySelector(".header h1").innerHTML = "Welcome to Yassine's Portfolio";
+        document.querySelector(".header p").innerHTML = "Check out my social media profiles!";
+      
+        const links = document.querySelectorAll(".links a");
+        links.forEach(link => {
+          link.addEventListener("mouseover", function() {
+            this.style.backgroundColor = "#03A9F4";
+            this.style.color = "white";
+          });
+      
+          link.addEventListener("mouseout", function() {
+            this.style.backgroundColor = "transparent";
+            this.style.color = "white";
+          });
+        });
+      </script>
     </body>
   </html>
   
